@@ -6,7 +6,7 @@ function Menu() {
 	const menu = useLoaderData();
 	console.log(menu);
 	return (
-		<div>
+		<ul className="divide-y divide-stone-200">
 			{menu.map(pizza => {
 				return (
 					<MenuItem
@@ -15,7 +15,7 @@ function Menu() {
 					/>
 				);
 			})}
-		</div>
+		</ul>
 	);
 }
 

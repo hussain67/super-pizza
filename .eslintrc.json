@@ -1,4 +1,4 @@
 {
-	"extends": "react-app",
-	"rules": { "react/prop-types": "off" }
+	"extends": "react-app"
+	// "rules": { "react/prop-types": "off" }
 }
