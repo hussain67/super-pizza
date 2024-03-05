@@ -1,12 +1,10 @@
 import { useLoaderData, Link } from "react-router-dom";
 import { getMenu } from "../../services/apiRestaurant";
 import MenuItem from "./MenuItem";
-import { useSelector } from "react-redux";
 
 function Menu() {
 	const menu = useLoaderData();
-	const userName = useSelector(state => state.user.userName);
-	console.log(userName);
+
 	return (
 		<>
 			<Link to={"/order/new"}>New Order</Link>

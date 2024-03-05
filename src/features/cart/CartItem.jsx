@@ -1,16 +1,30 @@
+import { useDispatch } from "react-redux";
 import Button from "../../ui/Button";
 import { formatCurrency } from "../../utils/helpers";
+import { deleteItem } from "./cartSlice";
+import UpdateItemQuantity from "./updateItemQuantity";
 
 function CartItem({ item }) {
-	const { name, quantity, totalPrice } = item;
+	const { pizzaId, name, quantity, totalPrice } = item;
+	const dispatch = useDispatch();
 	return (
-		<li className="flex justify-between py-4">
+		<li className="flex justify-between py-4 items-center">
 			<p>
-				{quantity}&times; {name}
+				{quantity} &times; {name}
 			</p>
-			<div className="flex gap-4">
+			<div className="flex gap-4 items-center">
 				<p>{formatCurrency(totalPrice)}</p>
-				<Button type="small">Delete</Button>
+
+				<UpdateItemQuantity
+					id={pizzaId}
+					quantity={quantity}
+				/>
+				<Button
+					type="small"
+					onClick={() => dispatch(deleteItem(pizzaId))}
+				>
+					Delete
+				</Button>
 			</div>
 		</li>
 	);

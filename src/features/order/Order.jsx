@@ -63,7 +63,7 @@ function Order() {
 				{cart.map(item => (
 					<OrderItem
 						item={item}
-						key={id}
+						key={item.pizzaId}
 					/>
 				))}
 			</ul>
