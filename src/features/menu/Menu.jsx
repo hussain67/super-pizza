@@ -1,4 +1,4 @@
-import { useLoaderData, Link } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { getMenu } from "../../services/apiRestaurant";
 import MenuItem from "./MenuItem";
 
@@ -7,8 +7,8 @@ function Menu() {
 
 	return (
 		<>
-			<Link to={"/order/new"}>New Order</Link>
-			<ul className="divide-y divide-stone-200">
+			{/* <Link to={"/order/new"}></Link> */}
+			<ul className="divide-y divide-stone-200 px-6 py-4">
 				{menu.map(pizza => {
 					return (
 						<MenuItem

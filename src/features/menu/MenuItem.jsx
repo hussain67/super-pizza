@@ -21,7 +21,7 @@ function MenuItem({ pizza }) {
 		dispatch(addItem(newPizza));
 	};
 	return (
-		<li className="flex gap-4 py-1 ">
+		<li className="flex gap-4 py-2 ">
 			<img
 				src={imageUrl}
 				alt={name}
